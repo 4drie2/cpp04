@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abidaux <abidaux@student.42lehavre.fr>     +#+  +:+       +#+         #
+#    By: adrien <adrien@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 17:37:02 by abidaux           #+#    #+#              #
-#    Updated: 2026/01/06 12:07:10 by abidaux          ###   ########.fr        #
+#    Updated: 2026/01/15 00:41:23 by adrien           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,10 @@ INC_DIR		= include
 
 # Sources
 SRC_FILES	=	Animal.cpp \
-                main.cpp
+				Cat.cpp \
+				Dog.cpp \
+				WrongAnimal.cpp \
+				main.cpp
 
 # Object files
 OBJ_FILES	= $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.cpp=.o))

@@ -6,7 +6,7 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 11:57:57 by abidaux           #+#    #+#             */
-/*   Updated: 2026/01/15 00:34:12 by adrien           ###   ########.fr       */
+/*   Updated: 2026/01/15 00:41:19 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,58 +41,4 @@ void Animal::makeSound() const {
 
 std::string Animal::getType() const {
     return this->type;
-}
-
-//! Cat class implementation
-
-Cat::Cat() {
-    this->type = "Cat";
-    std::cout << "Cat default constructor called" << std::endl;
-}
-
-Cat::Cat(const Cat& other) : Animal(other) {
-    std::cout << "Cat copy constructor called" << std::endl;
-}
-
-Cat& Cat::operator=(const Cat& other) {
-    std::cout << "Cat copy assignment operator called" << std::endl;
-    if (this != &other) {
-        Animal::operator=(other);
-    }
-    return *this;
-}
-
-Cat::~Cat() {
-    std::cout << "Cat destructor called" << std::endl;
-}
-
-void Cat::makeSound() const {
-    std::cout << "Animal sound: Meow" << std::endl;
-}
-
-//! Dog class implementation
-
-Dog::Dog() {
-    this->type = "Dog";
-    std::cout << "Dog default constructor called" << std::endl;
-}
-
-Dog::Dog(const Dog& other) : Animal(other) {
-    std::cout << "Dog copy constructor called" << std::endl;
-}
-
-Dog& Dog::operator=(const Dog& other) {
-    std::cout << "Dog copy assignment operator called" << std::endl;
-    if (this != &other) {
-        Animal::operator=(other);
-    }
-    return *this;
-}
-
-Dog::~Dog() {
-    std::cout << "Dog destructor called" << std::endl;
-}
-
-void Dog::makeSound() const {
-    std::cout << "Animal sound: Woof" << std::endl;
 }
