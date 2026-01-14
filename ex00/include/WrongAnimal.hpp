@@ -1,47 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/06 11:55:26 by abidaux           #+#    #+#             */
-/*   Updated: 2026/01/15 00:21:38 by adrien           ###   ########.fr       */
+/*   Created: 2026/01/15 00:21:13 by adrien            #+#    #+#             */
+/*   Updated: 2026/01/15 00:22:29 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
+#include "Animal.hpp"
 
-#include <iostream>
-#include <string>
-
-class Animal {
+class WrongAnimal {
     public :
-        Animal();
-        Animal(const Animal& other);
-        Animal& operator=(const Animal& other);
-        virtual ~Animal();
-        virtual void makeSound() const;
+        WrongAnimal();
+        WrongAnimal(const WrongAnimal& other);
+        WrongAnimal& operator=(const WrongAnimal& other);
+        virtual ~WrongAnimal();
+        void makeSound() const;
         std::string getType() const;
     protected :
         std::string type;
 };
 
-class Cat : public Animal {
+
+class WrongCat : public WrongAnimal {
     public :
-        Cat();
-        Cat(const Cat& other);
-        Cat& operator=(const Cat& other);
-        ~Cat();
+        WrongCat();
+        WrongCat(const WrongCat& other);
+        WrongCat& operator=(const WrongCat& other);
+        ~WrongCat();
         void makeSound() const;
 
-};
-
-class Dog : public Animal {
-    public :
-        Dog();
-        Dog(const Dog& other);
-        Dog& operator=(const Dog& other);
-        virtual ~Dog();
-        void makeSound() const;
 };

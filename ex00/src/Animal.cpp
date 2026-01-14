@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abidaux <abidaux@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/06 11:57:57 by abidaux           #+#    #+#             */
-/*   Updated: 2026/01/06 12:47:57 by abidaux          ###   ########.fr       */
+/*   Updated: 2026/01/15 00:24:22 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,15 @@ Animal::~Animal() {
 }
 
 void Animal::makeSound() const {
-    std::cout << "Animal sound: " << animalsound << std::endl;
+    std::cout << "Animal sound" << std::endl;
+}
+
+void Dog::makeSound() const {
+    std::cout << "Animal sound: Woof" << std::endl;
+}
+
+void Cat::makeSound() const {
+    std::cout << "Animal sound: Meow" << std::endl;
 }
 
 std::string Animal::getType() const {
@@ -42,7 +50,6 @@ std::string Animal::getType() const {
 
 Cat::Cat() {
     this->type = "Cat";
-    this->animalsound = "Meow";
     std::cout << "Cat default constructor called" << std::endl;
 }
 
@@ -64,7 +71,6 @@ Cat::~Cat() {
 
 Dog::Dog() {
     this->type = "Dog";
-    this->animalsound = "Woof";
     std::cout << "Dog default constructor called" << std::endl;
 }
 
