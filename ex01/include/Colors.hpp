@@ -6,7 +6,7 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 00:00:00 by adrien            #+#    #+#             */
-/*   Updated: 2026/01/15 01:52:59 by adrien           ###   ########.fr       */
+/*   Updated: 2026/01/15 02:07:52 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@
 #define C_CAT		"\033[1;34m"  // Blue - Cat
 #define C_DOG		"\033[1;93m"  // Bright Yellow - Dog
 #define C_WRONG		"\033[1;91m"  // Bright Red - WrongAnimal/WrongCat
+#define C_BRAIN     "\033[1;94m"  // Bright Blue - Brain

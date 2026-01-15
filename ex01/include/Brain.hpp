@@ -6,12 +6,11 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 02:04:42 by adrien            #+#    #+#             */
-/*   Updated: 2026/01/15 02:05:34 by adrien           ###   ########.fr       */
+/*   Updated: 2026/01/15 02:11:12 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
 #include <iostream>
 
 class Brain {
