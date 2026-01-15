@@ -6,7 +6,7 @@
 #    By: adrien <adrien@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 17:37:02 by abidaux           #+#    #+#              #
-#    Updated: 2026/01/15 02:04:11 by adrien           ###   ########.fr        #
+#    Updated: 2026/01/15 02:14:58 by adrien           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ RESET		= \033[0m
 SRC_FILES	=	Animal.cpp \
 				Cat.cpp \
 				Dog.cpp \
-				WrongAnimal.cpp \
+				WrongCat.cpp \
 				main.cpp
 
 # Object files
