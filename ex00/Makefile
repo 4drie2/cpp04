@@ -6,7 +6,7 @@
 #    By: adrien <adrien@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 17:37:02 by abidaux           #+#    #+#              #
-#    Updated: 2026/01/15 00:58:48 by adrien           ###   ########.fr        #
+#    Updated: 2026/01/15 01:59:02 by adrien           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,13 @@ NAME		= ex00
 SRC_DIR		= src
 OBJ_DIR		= obj
 INC_DIR		= include
+
+# Colors
+GREEN		= \033[1;32m
+CYAN		= \033[1;36m
+YELLOW		= \033[1;33m
+RED			= \033[1;31m
+RESET		= \033[0m
 
 # Sources
 SRC_FILES	=	Animal.cpp \
@@ -40,14 +47,14 @@ all: $(NAME)
 
 # Link objects to create the binary
 $(NAME): $(OBJ_FILES)
-	@echo "Linking $(NAME)..."
-	$(CXX) $(CXXFLAGS) $(OBJ_FILES) -o $(NAME)
+	@printf "$(CYAN)Linking $(NAME)...$(RESET)\n"
+	@$(CXX) $(CXXFLAGS) $(OBJ_FILES) -o $(NAME) && \
+		printf "$(GREEN)✓ $(NAME) ready!$(RESET)\n"
 
 # Compile .cpp to .o
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp | $(OBJ_DIR)
-	@mkdir -p $(OBJ_DIR)
-	@echo "Compiling $<..."
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+	@printf "$(YELLOW)Compiling $<...$(RESET)\n"
+	@$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 # Ensure obj/ exists
 $(OBJ_DIR):
@@ -55,12 +62,12 @@ $(OBJ_DIR):
 
 # Clean object files
 clean:
-	@echo "Cleaning object files..."
+	@printf "$(RED)Cleaning object files...$(RESET)\n"
 	@rm -rf $(OBJ_DIR)
 
 # Clean everything
 fclean: clean
-	@echo "Removing executable..."
+	@printf "$(RED)Removing executable...$(RESET)\n"
 	@rm -f $(NAME)
 
 # Rebuild

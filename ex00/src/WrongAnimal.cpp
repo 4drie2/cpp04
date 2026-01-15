@@ -6,24 +6,25 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 00:22:40 by adrien            #+#    #+#             */
-/*   Updated: 2026/01/15 00:42:17 by adrien           ###   ########.fr       */
+/*   Updated: 2026/01/15 01:55:33 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/WrongAnimal.hpp"
+#include "../include/Colors.hpp"
 
 //! WrongAnimal class implementation
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal") {
-    std::cout << "WrongAnimal default constructor called" << std::endl;
+    std::cout << C_WRONG << "WrongAnimal" << C_DEF << " default constructor called" << RST << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& other) : type(other.type) {
-    std::cout << "WrongAnimal copy constructor called" << std::endl;
+    std::cout << C_WRONG << "WrongAnimal" << C_CPY << " copy constructor called" << RST << std::endl;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
-    std::cout << "WrongAnimal copy assignment operator called" << std::endl;
+    std::cout << C_WRONG << "WrongAnimal" << C_ASN << " copy assignment operator called" << RST << std::endl;
     if (this != &other) {
         this->type = other.type;
     }
@@ -31,7 +32,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
 }
 
 WrongAnimal::~WrongAnimal() {
-    std::cout << "WrongAnimal destructor called" << std::endl;
+    std::cout << C_WRONG << "WrongAnimal" << C_DST << " destructor called" << RST << std::endl;
 }
 
 void WrongAnimal::makeSound() const {
@@ -50,15 +51,15 @@ void WrongCat::makeSound() const {
 
 WrongCat::WrongCat() {
 	this->type = "WrongCat";
-	std::cout << "WrongCat default constructor called" << std::endl;
+	std::cout << C_WRONG << "WrongCat" << C_DEF << " default constructor called" << RST << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other) {
-	std::cout << "WrongCat copy constructor called" << std::endl;
+	std::cout << C_WRONG << "WrongCat" << C_CPY << " copy constructor called" << RST << std::endl;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& other) {
-	std::cout << "WrongCat copy assignment operator called" << std::endl;
+	std::cout << C_WRONG << "WrongCat" << C_ASN << " copy assignment operator called" << RST << std::endl;
 	if (this != &other) {
 		this->type = other.type;
 	}
@@ -66,5 +67,5 @@ WrongCat& WrongCat::operator=(const WrongCat& other) {
 }
 
 WrongCat::~WrongCat() {
-	std::cout << "WrongCat destructor called" << std::endl;
+	std::cout << C_WRONG << "WrongCat" << C_DST << " destructor called" << RST << std::endl;
 }

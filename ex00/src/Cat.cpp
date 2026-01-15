@@ -6,23 +6,24 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 00:00:00 by adrien            #+#    #+#             */
-/*   Updated: 2026/01/15 00:41:19 by adrien           ###   ########.fr       */
+/*   Updated: 2026/01/15 01:55:33 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Cat.hpp"
+#include "../include/Colors.hpp"
 
 Cat::Cat() {
     this->type = "Cat";
-    std::cout << "Cat default constructor called" << std::endl;
+    std::cout << C_CAT << "Cat" << C_DEF << " default constructor called" << RST << std::endl;
 }
 
 Cat::Cat(const Cat& other) : Animal(other) {
-    std::cout << "Cat copy constructor called" << std::endl;
+    std::cout << C_CAT << "Cat" << C_CPY << " copy constructor called" << RST << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other) {
-    std::cout << "Cat copy assignment operator called" << std::endl;
+    std::cout << C_CAT << "Cat" << C_ASN << " copy assignment operator called" << RST << std::endl;
     if (this != &other) {
         Animal::operator=(other);
     }
@@ -30,7 +31,7 @@ Cat& Cat::operator=(const Cat& other) {
 }
 
 Cat::~Cat() {
-    std::cout << "Cat destructor called" << std::endl;
+    std::cout << C_CAT << "Cat" << C_DST << " destructor called" << RST << std::endl;
 }
 
 void Cat::makeSound() const {
