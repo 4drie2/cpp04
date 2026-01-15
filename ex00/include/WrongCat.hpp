@@ -6,7 +6,7 @@
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 00:21:13 by adrien            #+#    #+#             */
-/*   Updated: 2026/01/15 02:06:40 by adrien           ###   ########.fr       */
+/*   Updated: 2026/01/15 03:27:04 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class WrongAnimal {
         WrongAnimal();
         WrongAnimal(const WrongAnimal& other);
         WrongAnimal& operator=(const WrongAnimal& other);
-        virtual ~WrongAnimal();
+        ~WrongAnimal();
         void makeSound() const;
         std::string getType() const;
     protected :
