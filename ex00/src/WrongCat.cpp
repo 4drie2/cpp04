@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrien <adrien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 00:22:40 by adrien            #+#    #+#             */
-/*   Updated: 2026/01/15 01:55:33 by adrien           ###   ########.fr       */
+/*   Updated: 2026/01/15 02:06:30 by adrien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/WrongAnimal.hpp"
+#include "../include/WrongCat.hpp"
 #include "../include/Colors.hpp"
 
 //! WrongAnimal class implementation
